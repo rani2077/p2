@@ -1,0 +1,169 @@
+.footer{
+    margin-top: 200px;
+    background: #111b2a;
+    color: #ffffff99;
+    @include mobile{
+        padding-bottom: 60px;
+    }
+    .group-footer{
+        max-width:1516px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 97px 0 80px;
+        @include tablet{
+            flex-direction:column;
+            align-items: center;
+            gap: 30px;
+            padding: 30px 0 40px;
+        }
+        @include mobile{
+        }
+    }
+    .sns-area{
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        .link-sns{
+            opacity:0.3;
+            width: 69px;
+            height: 69px;
+            border:1px solid rgb(247, 247, 247);
+            border-radius:13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition:opacity 300ms, background 300ms, border 300ms;
+            @include tablet{
+                border-radius:18px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .link-sns:hover{
+            border:0;
+            opacity:1;
+            background:#326aff;
+        }
+    }
+
+    .adress-area{
+        .footer-logo{
+            display: block;
+            margin-bottom: 39px;
+        }
+        .footer-logo img{
+            display: block;
+            margin: 0 auto;
+        }
+        adress{
+            text-align: center;
+            display: block;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    }
+
+    .family-area{
+        width: 228px;
+        height: auto;
+        button{
+            font-family: 'Exo 2', 'Noto Sans KR', sans-serif;
+            padding: 0 25px;
+            border-radius:18px;
+            font-size: 16px;
+            width: 100%;
+            background: transparent;
+            border:1px solid rgba(255,255,255,0.3);
+            outline:none;
+            text-align: left;
+            height: 69px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &::after{
+                background: url('../images/tri-ico-w.png') center/cover no-repeat;
+                content:'';
+                width: 11px;
+                height: 8px;
+                display: block;
+                transform:rotate(180deg);
+            }
+            &.delay{
+                transition:border-radius 1500ms 600ms;
+            }
+        }
+        .family-list{
+            overflow: hidden;
+            transition:max-height 600ms, padding 600ms;
+            max-height:0;
+            width: 100%;
+            background: rgba(255, 255, 255, 1);
+            color: rgba(17, 27, 42, 0.4);
+            font-size: 16px;
+            padding: 0;
+            border-radius:0 0 18px 18px;
+        }
+        .family-item{
+            padding: 0 26px;
+            height: 35px;
+            line-height: 35px;
+        }
+        &.on{
+            button{
+                border-radius:18px 18px 0 0;
+                background: #fff;
+                color: #222;
+                border-bottom:1px solid rgba(0,0,0,0.1);
+                &::after{
+                    background: url('../images/tri-ico-b.png') center/cover no-repeat;
+                    transform:rotate(0deg);
+                }
+            }
+            .family-list{
+                max-height:10vh;
+                padding: 15px 0 20px;
+            }
+            .family-item{
+                padding: 0 26px;
+                height: 35px;
+                line-height: 35px;
+            }
+            
+        }
+    }
+
+    .group-legal{
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top:1px solid rgba(121, 121, 121, 0.3);
+        gap: 36px;
+        @include mobile{
+            gap: 12px;
+        }
+        .link-legal{
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            @include mobile{
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    .group-copyright{
+        font-size: 14px;
+        background: #08111f;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.2);
+        height: 39px;
+        line-height: 39px;
+        @include mobile{
+            font-size: 11px;
+        }
+    }
+}
